@@ -4,27 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Introductie - Eindopdracht NMD-I</title>
+    <title>Eindopdracht NMD-I</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="base.css">
 </head>
 <body>
-    <h1>New Media Design I</h1>
-    <h2>[PROJECT_NAME]</h2>
-
-    <dl class="info">
-        <dt>Naam</dt>
-        <dd>[STUDENT_NAAM]</dd>
-        <dt>Studentnummer</dt>
-        <dd>[STUDENT_NR]</dd>
-        <dt>Klasgroep</dt>
-        <dd>[KLASGROEP]</dd>
-    </dl>
-    <p>
-        <a href="http://deweirdt.be/nmd1/thanks.php?student_id=[STUDENT_NR]">Mijn opdracht</a>
+<div id="intropagina">
+    
+    <h1 id="introtekst">Retropedia intropagina </h1>
+    <p id="introtekst2">
+   Retropedia is een festival waar jong en oud kunnen verenigen met een combinatie van de beste retromuziek met verschillende stages die voorzien zijn van eetkramen en, biertenten en cocktailbars voor de liefhebbers. Daarnaast 
+    is er een kamping die ideaal gelegen is ten opzichte van de weide. ER zal techno zijn maar ook house, acid en andere varianten met klassiekers voor jong en oud . De grote cattegorieën zullen beschikken van elke een pagina met voldoen uitleg en informatie over welke dj's moeten optreden. De kleuren zullen uiteraard iets meer vervaagde kleuren bevatten voor de retro look tot leven te brengen . Retropedia is de titel of naam van het festival . Er zullen vier hyperlinks in de navigatie  staan waaronder :"homepage , muziek met een woordje uitleg over de line-up dan een hyperlink van de pagina die gaat over tickets en nog een pagina over de dranken en versnaperingen die zullen geserveerd worden .</p>
+     <p id="introtekst2">   Op De homepgae zal vermeld staan waneer en waar het festival doorgaat en hoe het festival in elkaar zit ( Met een paar foto's van de locatie).De achtergrond zal uitgerust zijn met een retrolook. Dan de tweede pagina gaat over muziek hierop vind je de categorieën met de namen die komen. Op de derde pagina staat alles in verband met eten , verschillende soorten kraampjes waarbij uitgelegd staat wat ze verkopen.De vierde pagina zal gaan over ticket informatie, over de verschillende tarieven met een koop knop(deze dal linken naar een pagina maar zal nog niet werken)
     </p>
     
-    <h1>Introductie</h1>
-    <p>[About my project]</p>
+    
+    
+    
+</div>
+<script>
+    var $nav = document.getElementById("nav");
+    var $button = document.getElementById("menu");
+    $button.addEventListener('click', function () {
+        
+        if ($nav.classList.contains('open')) {
+            $nav.classList.remove('open');
+            this.classList.remove('open');
+        } else {
+            $nav.classList.add('open');
+            this.classList.add('open');
+        }
+    });
+    var $links = document.querySelectorAll('a');
+    var $current = document.querySelector('a.active');
+    $links.forEach(function(link) {
+        link.addEventListener('click', function () {
+            $current.classList.remove('active'); 
+            this.classList.add('active');
+            $current = this;
+        });
+    });
+</script>
 </body>
 </html>
